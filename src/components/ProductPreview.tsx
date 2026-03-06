@@ -8,18 +8,18 @@ export default function ProductPreview() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} className="relative py-32 px-6 overflow-hidden">
+    <section ref={ref} className="relative py-24 sm:py-32 px-4 sm:px-6 overflow-hidden">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
           <p className="text-sm font-medium text-accent tracking-wide uppercase mb-4">
             Product Preview
           </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight">
+          <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold tracking-tight leading-tight">
             A calm home for <span className="gradient-text">your ideas.</span>
           </h2>
         </motion.div>
@@ -30,15 +30,15 @@ export default function ProductPreview() {
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="md:col-span-2 p-6 rounded-2xl bg-card border border-border hover:shadow-xl hover:shadow-accent/5 transition-all group"
+            className="md:col-span-2 p-4 sm:p-6 rounded-2xl bg-card border border-border hover:shadow-xl hover:shadow-accent/5 transition-all group"
           >
             <p className="text-xs font-medium text-accent uppercase tracking-wide mb-4">
               Intelligent Search
             </p>
-            <div className="rounded-xl bg-background border border-border p-4">
-              <div className="flex items-center gap-3 mb-4">
+            <div className="rounded-xl bg-background border border-border p-3 sm:p-4">
+              <div className="flex items-center gap-2 sm:gap-3 mb-4 min-w-0">
                 <svg
-                  className="w-4 h-4 text-accent"
+                  className="w-4 h-4 text-accent shrink-0"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -50,10 +50,10 @@ export default function ProductPreview() {
                     d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                   />
                 </svg>
-                <span className="text-sm text-foreground">
+                <span className="text-sm text-foreground truncate min-w-0">
                   that startup funding article
                 </span>
-                <span className="ml-auto text-xs text-muted">3 results</span>
+                <span className="ml-auto text-xs text-muted shrink-0">3 results</span>
               </div>
               <div className="space-y-2">
                 {[
@@ -75,9 +75,9 @@ export default function ProductPreview() {
                 ].map((item) => (
                   <div
                     key={item.title}
-                    className="flex items-center gap-3 p-3 rounded-lg hover:bg-accent-subtle/50 transition-colors"
+                    className="flex items-center gap-2 sm:gap-3 p-2.5 sm:p-3 rounded-lg hover:bg-accent-subtle/50 transition-colors"
                   >
-                    <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center text-xs">
+                    <div className="w-8 h-8 rounded-lg bg-accent/10 flex items-center justify-center text-xs shrink-0">
                       📄
                     </div>
                     <div className="flex-1 min-w-0">
@@ -86,7 +86,7 @@ export default function ProductPreview() {
                       </p>
                       <p className="text-xs text-muted">{item.source}</p>
                     </div>
-                    <span className="text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent font-medium">
+                    <span className="text-[11px] sm:text-xs px-2 py-0.5 rounded-full bg-accent/10 text-accent font-medium shrink-0">
                       {item.tag}
                     </span>
                   </div>
@@ -100,7 +100,7 @@ export default function ProductPreview() {
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="p-6 rounded-2xl bg-card border border-border hover:shadow-xl hover:shadow-accent/5 transition-all"
+            className="p-4 sm:p-6 rounded-2xl bg-card border border-border hover:shadow-xl hover:shadow-accent/5 transition-all"
           >
             <p className="text-xs font-medium text-accent uppercase tracking-wide mb-4">
               Auto-Categories
@@ -116,16 +116,16 @@ export default function ProductPreview() {
               ].map((cat) => (
                 <div
                   key={cat.name}
-                  className="flex items-center justify-between p-3 rounded-xl bg-background border border-border hover:border-accent/20 transition-colors"
+                  className="flex items-center justify-between gap-2 p-3 rounded-xl bg-background border border-border hover:border-accent/20 transition-colors"
                 >
                   <div className="flex items-center gap-2">
                     <span
-                      className={`text-xs px-2 py-0.5 rounded-full font-medium ${cat.color}`}
+                      className={`text-[11px] sm:text-xs px-2 py-0.5 rounded-full font-medium ${cat.color}`}
                     >
                       {cat.name}
                     </span>
                   </div>
-                  <span className="text-xs text-muted">{cat.count} items</span>
+                  <span className="text-[11px] sm:text-xs text-muted shrink-0">{cat.count} items</span>
                 </div>
               ))}
             </div>
@@ -136,12 +136,12 @@ export default function ProductPreview() {
             initial={{ opacity: 0, y: 40 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.7, delay: 0.3 }}
-            className="md:col-span-3 p-6 rounded-2xl bg-card border border-border hover:shadow-xl hover:shadow-accent/5 transition-all"
+            className="md:col-span-3 p-4 sm:p-6 rounded-2xl bg-card border border-border hover:shadow-xl hover:shadow-accent/5 transition-all"
           >
             <p className="text-xs font-medium text-accent uppercase tracking-wide mb-4">
               Recent Saves
             </p>
-            <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-3">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
               {[
                 {
                   icon: "🎬",
