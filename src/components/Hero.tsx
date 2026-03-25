@@ -1,12 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 export default function Hero() {
-  const scrollToWaitlist = () => {
-    document.getElementById("waitlist")?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section
       id="hero"
@@ -40,15 +37,15 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button
-              onClick={scrollToWaitlist}
+            <Link
+              href="/privacy-policy"
               className="group relative px-8 py-3.5 bg-foreground text-white rounded-full text-sm font-medium transition-all hover:shadow-xl hover:shadow-accent/20 hover:scale-[1.02] active:scale-[0.98] cursor-pointer"
             >
-              Join the Waitlist
+              Privacy Policy
               <span className="inline-block ml-2 transition-transform group-hover:translate-x-0.5">
                 →
               </span>
-            </button>
+            </Link>
             <button
               onClick={() =>
                 document

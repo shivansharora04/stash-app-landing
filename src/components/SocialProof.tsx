@@ -50,7 +50,7 @@ export default function SocialProof() {
 
           <div className="mt-8">
             <p className="text-3xl font-bold text-foreground">100+</p>
-            <p className="text-sm text-muted">people on the waitlist</p>
+            <p className="text-sm text-muted">early users interested</p>
           </div>
         </motion.div>
       </div>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
@@ -58,12 +59,12 @@ export default function Navbar() {
             >
               Features
             </button>
-            <button
-              onClick={() => scrollTo("waitlist")}
+            <Link
+              href="/privacy-policy"
               className="text-sm font-medium text-white bg-foreground hover:bg-foreground/90 px-4 py-2 rounded-full transition-all hover:shadow-lg cursor-pointer"
             >
-              Join Waitlist
-            </button>
+              Privacy Policy
+            </Link>
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -118,12 +119,13 @@ export default function Navbar() {
               >
                 Features
               </button>
-              <button
-                onClick={() => scrollTo("waitlist")}
+              <Link
+                href="/privacy-policy"
+                onClick={() => setMobileOpen(false)}
                 className="text-sm font-medium text-white bg-foreground px-4 py-2 rounded-full text-center"
               >
-                Join Waitlist
-              </button>
+                Privacy Policy
+              </Link>
             </div>
           </motion.div>
         )}

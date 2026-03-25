@@ -5,7 +5,6 @@ import Solution from "@/components/Solution";
 import ProductPreview from "@/components/ProductPreview";
 import Features from "@/components/Features";
 import SocialProof from "@/components/SocialProof";
-import Waitlist from "@/components/Waitlist";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
       <ProductPreview />
       <Features />
       <SocialProof />
-      <Waitlist />
       <Footer />
     </main>
   );

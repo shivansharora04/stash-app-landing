@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <footer className="border-t border-border py-12 px-6">
@@ -12,6 +14,12 @@ export default function Footer() {
         </div>
 
         <div className="flex items-center gap-6">
+          <Link
+            href="/privacy-policy"
+            className="text-muted hover:text-foreground transition-colors text-sm"
+          >
+            Privacy Policy
+          </Link>
           <a
             href="mailto:stashapplabs@gmail.com"
             className="text-muted hover:text-foreground transition-colors text-sm"
